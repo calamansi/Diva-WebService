@@ -41,9 +41,9 @@ public class SegmentationService {
     }
 
     @GET
-    @Path("/word")
+    @Path("/line")
     @Produces("application/json")
-    public String getWordSegmentInfo() throws IOException {
+    public String getLineSegmentInfo() throws IOException {
         byte[] encoded = Files.readAllBytes(Paths.get(new File(context.getRealPath("/json/lineSegmentation.json")).toURI()));
         return new String(encoded);
     }
