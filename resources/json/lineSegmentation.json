@@ -1,0 +1,32 @@
+{
+    "info":"Histogram based line segmentation",
+    "example": {
+        "input": {
+            "url": "http://www.e-codices.unifr.ch/manuscripts/e-codices/fit/bbb-0360/bbb-0360_001r.jpg",
+            "top": "150",
+            "bottom": "250",
+            "left": "95",
+            "right": "470"
+        },
+        "output": [
+            {
+                "bottom": "180",
+                "left": "95",
+                "right": "469",
+                "top": "156"
+            },
+            {
+                "bottom": "214",
+                "left": "95",
+                "right": "469",
+                "top": "192"
+            },
+            {
+                "bottom": "246",
+                "left": "95",
+                "right": "466",
+                "top": "226"
+            }
+        ]
+    }
+}

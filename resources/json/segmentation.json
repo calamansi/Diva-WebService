@@ -1,0 +1,22 @@
+{
+    "info": "Provider of several segmentation methods",
+    "methods": {
+        "/line": "Histogram based line segmentation"
+    },
+    "input": {
+        "url": "URL to the image",
+        "top": "the y-location of the uppermost pixel in the image to process (set to 0 if the whole image should be processed).",
+        "bottom": "the y-location of the lowermost pixel in the image to process (set to 'image-height' if the whole image should be processed).",
+        "left": "the x-location of the leftmost pixel in the image to process (set to 0 if the whole image should be processed).",
+        "right": "the x-location of the rightmost pixel in the image to process (set to 'image-width' if the whole image should be processed)."
+    },
+    "output": [
+        {
+            "bottom": "y-location of the lowest pixel belonging to the line",
+            "left": "x-location of the leftmost pixel belonging to the line",
+            "right": "x-location of the rightmost pixel belonging to the line",
+            "top": "y-location of the top pixel belonging to the line"
+        }
+    ]
+}
+

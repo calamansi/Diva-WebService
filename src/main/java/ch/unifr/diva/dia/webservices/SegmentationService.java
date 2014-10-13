@@ -10,10 +10,14 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import javax.imageio.ImageIO;
+import javax.servlet.ServletContext;
 import javax.ws.rs.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -24,28 +28,24 @@ import java.util.TreeMap;
  */
 @Path("/segmentation")
 public class SegmentationService {
+
+    @javax.ws.rs.core.Context
+    ServletContext context;
+
+    @GET
+    @Produces("application/json")
+    public String getSegmentationInformation() throws IOException{
+
+        byte[] encoded = Files.readAllBytes(Paths.get(new File(context.getRealPath("/json/segmentation.json")).toURI()));
+        return new String(encoded);
+    }
+
     @GET
     @Path("/word")
     @Produces("application/json")
-    public String getWordSegmentInfo() throws JSONException {
-        JSONArray segmentInfos = new JSONArray();
-        JSONObject segmentInfo = new JSONObject();
-        JSONObject infos = new JSONObject();
-        infos.put("shortInfo","Segments a text line into words");
-        segmentInfo.put("infos",infos);
-
-        JSONObject neededValues = new JSONObject();
-        JSONObject values = new JSONObject();
-        values.put("url","URL to the image");
-        values.put("top","the y-location of the uppermost pixel in the image to process (set to 0 if the whole image should be processed).");
-        values.put("bottom","the y-location of the lowermost pixel in the image to process (set to 'image-height' if the whole image should be processed).");
-        values.put("left","the x-location of the leftmost pixel in the image to process (set to 0 if the whole image should be processed).");
-        values.put("right","the x-location of the rightmost pixel in the image to process (set to 'image-width' if the whole image should be processed).");
-        neededValues.put("inputValues",values);
-        segmentInfos.put(segmentInfo);
-        segmentInfos.put(neededValues);
-
-        return segmentInfos.toString();
+    public String getWordSegmentInfo() throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(new File(context.getRealPath("/json/lineSegmentation.json")).toURI()));
+        return new String(encoded);
     }
 
     @POST

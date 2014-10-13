@@ -21,7 +21,4 @@ public class SegmentationBean {
     public String left;
     @XmlElement
     public String right;
-    @XmlElement
-    public String mode;
-
 }

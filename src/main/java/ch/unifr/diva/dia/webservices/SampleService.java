@@ -1,6 +1,8 @@
 package ch.unifr.diva.dia.webservices;
 
 import ch.unifr.diva.dia.webservices.beans.SampleBean;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
 
 import javax.ws.rs.*;
 
@@ -9,6 +11,14 @@ import javax.ws.rs.*;
  */
 @Path("/myPath")
 public class SampleService {
+
+    @GET
+    @Produces("application/json")
+    public String getGeneralInfo() throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("info","GeneralInfos about the methods");
+        return jsonObject.toString();
+    }
 
     @GET
     @Path("/myMethod")

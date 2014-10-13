@@ -15,17 +15,15 @@ public class WebServiceBase {
     public static JSONArray createJsonArray(List<Map<String, Object>> values) {
         JSONArray jsonArray = new JSONArray();
         for (Map<String, Object> map : values) {
-            {
-                for (Map.Entry<String, Object> entry : map.entrySet()) {
-                    JSONObject jsonObject = new JSONObject();
-                    try {
-                        jsonObject.put(entry.getKey(), entry.getValue().toString());
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    jsonArray.put(jsonObject);
+            JSONObject jsonObject = new JSONObject();
+            for (Map.Entry<String, Object> entry : map.entrySet()) {
+                try {
+                    jsonObject.put(entry.getKey(), entry.getValue().toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
             }
+            jsonArray.put(jsonObject);
         }
         return jsonArray;
     }

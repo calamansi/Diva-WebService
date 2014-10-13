@@ -18,6 +18,7 @@ public class DivaWebservices extends Application {
         classes.add(MultiPartFeature.class);
         classes.add(LoggingFilter.class);
         classes.add(SegmentationService.class);
+        classes.add(SampleService.class);
         return classes;
     }
 }
