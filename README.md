@@ -38,6 +38,7 @@ FOR INTELLIJ:
 6. You can start implementing your own webservice now
 
 FOR Eclipse:
+
 1. Install Eclipse JEE Edition
 
 2. Use Import -> Maven -> Existing Maven project to import the project
