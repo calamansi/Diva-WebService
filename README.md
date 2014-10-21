@@ -10,6 +10,9 @@ This is a basic implementation of the Diva-WebServices, developed in the Diva gr
 	- For IntelliJ (you need Ultimate version) see: http://www.jetbrains.com/idea/webhelp/defining-application-servers-in-intellij-idea.html
 	- For Eclipse see: http://www.mulesoft.com/tcat/tomcat-eclipse
 
+<h2>Install Guide Ubuntu:</h2>
+1. Check out project from github
+2. Install tomcat7 (https://stackoverflow.com/questions/11219678/apache-tomcat-installation-directory-in-ubuntu-configure-tomcat-in-eclipse-u)
 
 FOR INTELLIJ:
 
@@ -33,6 +36,12 @@ FOR INTELLIJ:
  	- You should receive a JSON response with some information
 
 6. You can start implementing your own webservice now
+
+FOR Eclipse:
+1. Install Eclipse JEE Edition
+2. Use Import -> Maven -> Existing Maven project to import the project
+3. Add the Tomcat Server to eclipse (see http://www.coreservlets.com/Apache-Tomcat-Tutorial/tomcat-7-with-eclipse.html in the "Tell Eclipse about Tomcat" tab)
+4. Use Run -> Run as -> Run on server and select the Tomcat server to run the project on your local Tomcat
 
 <h2>Add a new method WebService</h2>
 For adding a new method to the WebService a few steps need to be performed:
