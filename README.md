@@ -39,8 +39,11 @@ FOR INTELLIJ:
 
 FOR Eclipse:
 1. Install Eclipse JEE Edition
+
 2. Use Import -> Maven -> Existing Maven project to import the project
+
 3. Add the Tomcat Server to eclipse (see http://www.coreservlets.com/Apache-Tomcat-Tutorial/tomcat-7-with-eclipse.html in the "Tell Eclipse about Tomcat" tab)
+
 4. Use Run -> Run as -> Run on server and select the Tomcat server to run the project on your local Tomcat
 
 <h2>Add a new method WebService</h2>
