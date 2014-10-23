@@ -19,6 +19,7 @@ public class DivaWebservices extends Application {
         classes.add(LoggingFilter.class);
         classes.add(SegmentationService.class);
         classes.add(SampleService.class);
+        classes.add(TextLineExtractionService.class);
         return classes;
     }
 }
