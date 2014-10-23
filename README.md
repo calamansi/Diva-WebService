@@ -22,8 +22,7 @@ FOR INTELLIJ:
 	- Add the "Web Module Deployment Descritpor" (In "Deployment Descriptors " click the "+" and then select the web.xml)
 	- Go to "Artifacts"
 		 - Click "+" -> "WebApplication Exploded" -> "From Modules" and Select the Project
-		 - In "Output Layout" -> Click "+" -> "Directory Content" and Select the "resources" folder
-
+		 
 3. Open "Run" -> "Edit Configurations" -> "+" -> "Tomcat Server" -> "local"
  	- Select "Deployment" -> "+" -> "Artifact" and Select the "*:war exploded"
  	- Hit "Apply" -> "OK"
