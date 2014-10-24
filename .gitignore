@@ -2,3 +2,6 @@
 .idea
 Diva-WebService.iml
 /target/
+.classpath
+.settings/
+.project
