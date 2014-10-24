@@ -38,10 +38,7 @@ public class TextLineExtraction {
 	public static String originalName = "d-008.0.1091.205.507.2337.png";
 	
 	public LinkedHashMap<String, Rectangle> patches = new LinkedHashMap<String, Rectangle>();
-	/**
-	 * @param args
-	 */
-	
+
 	public ArrayList<Polygon> start (){
 		BufferedImage img = null;
 		BufferedImage imgOriginal = null;

@@ -1,6 +1,7 @@
 package ch.unifr.diva.dia.webservices;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -48,7 +49,7 @@ public class TextLineExtractionService {
         		, Integer.valueOf(0), 
         		Integer.valueOf(507), 
         		Integer.valueOf(2337));
-        sub.write(System.getProperty("user.dir") + "/images" + "/d-008.0.1091.205.507.2337.png");
+        sub.write(System.getProperty("user.dir") + File.separator + "images" + File.separator +"d-008.0.1091.205.507.2337.png");
     	
         Step2Gabor step2Gabor = new Step2Gabor();
 		HashMap<String, Object> resultsTextline = step2Gabor.getResults();
@@ -58,18 +59,4 @@ public class TextLineExtractionService {
         results.add(values);       
         return WebServiceBase.createJsonArray(results).toString();
     }
-
-    @POST
-    @Path("/myMethod")
-    @Consumes("application/json")
-    @Produces("application/json")
-    public String performMyMethod(SampleBean data) throws JSONException{
-
-        //Perform your method
-        //Build your data into a List<Map<String,Object>>
-        //return WebServiceBase.createJsonArray(results).toString();
-    	return "";
-    	
-    }
-
 }

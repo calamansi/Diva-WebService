@@ -1,22 +1,16 @@
 package ch.unifr.diva.dia.textlineextraction;
 
-import java.awt.Polygon;
+import ch.unifr.diva.dia.linesegmentation.Image;
+import ch.unifr.diva.dia.webservices.helper.WebServiceBase;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-
-import javax.imageio.ImageIO;
-
-import ch.unifr.diva.dia.linesegmentation.Image;
-import ch.unifr.diva.dia.webservices.helper.WebServiceBase;
 
 
 /**
@@ -49,7 +43,7 @@ public class Step2Gabor {
 		return resultsTextline;
 	}
 
-	public static void main(String[] args) throws MalformedURLException, IOException {
+	public static void main(String[] args) throws IOException {
 		BufferedImage bi = ImageIO.read(new URL("http://diuf.unifr.ch/diva/divadiaweb/d-008.0.1091.205.507.2337.png"));
         Image img = new Image(bi);
         Image sub = img.getSubImage(img, Integer.valueOf(0)
